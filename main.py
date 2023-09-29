@@ -12,9 +12,14 @@ class memo(BaseModel):
 
 
 @app.post("/memos")
-def create_memo(memo):
-    memos.append(memo)
+def create_memo(memo_data: memo):
+    memos.append(memo_data)
     return '메모 추가에 성공했습니다.'
+
+
+@app.get("/memos")
+def read_memo():
+    return memos
 
 
 app.mount("/", StaticFiles(directory="static", html=True), name="static")
