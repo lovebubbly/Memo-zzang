@@ -1,0 +1,108 @@
+/* General styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+/* Form styling */
+form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+label {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #ddd;
+  margin: 8px 0;
+  padding: 8px;
+  text-align: left;
+  border-radius: 4px;
+}
+
+/* Animations */
+@keyframes buttonGlow {
+  0% {
+    box-shadow: 0 0 5px #4caf50;
+  }
+  50% {
+    box-shadow: 0 0 20px #4caf50, 0 0 30px #4caf50;
+  }
+  100% {
+    box-shadow: 0 0 5px #4caf50;
+  }
+}
+
+button {
+  animation: buttonGlow 2s infinite alternate;
+}
+
+@keyframes listItemPop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+li:hover {
+  animation: listItemPop 0.5s infinite alternate;
+}
+
+/* Scrollable Memo List */
+#memo-ul {
+  height: 60vh;
+  overflow-y: auto;
+  margin-top: 20px;
+}
+
+/* Fixed Input Field */
+#memo-form {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+}

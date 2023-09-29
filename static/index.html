@@ -4,19 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>메모 짱.</title>
+    <link rel="stylesheet" href="animated_styles.css" />
   </head>
   <body>
-    <form id="memo-form">
-      <label for="memo-input">메모를 입력하세요.</label>
-      <input
-        id="memo-input"
-        type="text"
-        placeholder="여기에 메모를 입력하세요."
-        required
-      />
-      <button id="memo-submit">추가❤️</button>
+    <div class="container">
+      <form id="memo-form">
+        <form id="memo-form">
+          <label for="memo-input">메모 짱.</label>
+          <input
+            id="memo-input"
+            type="text"
+            placeholder="여기에 메모를 입력하세요."
+            required
+          />
+          <button id="memo-submit">추가❤️</button>
+          <ul id="memo-ul"></ul>
+        </form>
+      </form>
       <ul id="memo-ul"></ul>
-    </form>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
